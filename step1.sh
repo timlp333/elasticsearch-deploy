@@ -22,6 +22,10 @@ source /etc/bash
 echo "備份elasticsearch 設定檔"
 mv /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config/elasticsearch.yml /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config/elasticsearch.yml.bak
 
+# 配置內核參數
+echo "配置內核參數..."
+sudo bash -c "echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf"
+
 # 配置防火牆
 echo "配置防火牆..."
 firewall-cmd --zone=public --permanent --add-port=9200/tcp
