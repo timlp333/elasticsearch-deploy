@@ -48,9 +48,9 @@ for /f %%i in (%HOSTFILE%) do (
 
 
 
-    :: 上傳 elasticsearch-6379.service 到 /etc/systemd/system
-    echo Uploading elasticsearch-6379.service to %%i: /etc/systemd/system
-    pscp.exe -pw %PASSWORD% %BATROOT%/6379/elasticsearch-6379.service %USERNAME%@%%i:/etc/systemd/system
+    :: 上傳 elasticsearch.service 到 /etc/systemd/system
+    echo Uploading elasticsearch.service to %%i: /etc/systemd/system
+    pscp.exe -pw %PASSWORD% %BATROOT%/elasticsearch.service %USERNAME%@%%i:/etc/systemd/system
 
    
     :: 上傳 step3.sh 到 /tmp

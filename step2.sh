@@ -9,9 +9,9 @@ tar -zxf /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config/certs.tar.gz
 
 chown -R elastic:elastic /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config/certs
 
-echo "Updated bind address to $LOCAL_IP in $ELASTICSEARCH_CONFIG_PATH"
+echo "Updated network.host to $LOCAL_IP in $ELASTICSEARCH_CONFIG_PATH"
 
-sed -i "s/^bind {localip}/bind $LOCAL_IP/" $ELASTICSEARCH_CONFIG_PATH
+sed -i "s/^network.host: {localip}/network.host: $LOCAL_IP/" $ELASTICSEARCH_CONFIG_PATH
 
 
 
