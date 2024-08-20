@@ -81,6 +81,7 @@ cluster.initial_master_nodes: ["node-1", "node-2", "node-3"]
 #
 #action.destructive_requires_name: false
 xpack.security.enabled: true
+xpack.security.http.ssl.enabled: true
 xpack.security.http.ssl.certificate: certs/elasticsearch/elasticsearch.crt
 xpack.security.http.ssl.key: certs/elasticsearch/elasticsearch.key
 
