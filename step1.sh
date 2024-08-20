@@ -24,7 +24,8 @@ mv /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config/elasticsearch.yml /
 
 # 配置內核參數
 echo "配置內核參數..."
-sudo bash -c "echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf"
+bash -c "echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf"
+sysctl -p
 
 # 配置防火牆
 echo "配置防火牆..."

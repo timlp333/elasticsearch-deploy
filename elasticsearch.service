@@ -9,7 +9,7 @@ Environment=ES_HOME=/home/elastic/elasticsearch-8.15.0
 Environment=CONF_DIR=/home/elastic/elasticsearch-8.15.0/config
 Environment=LOG_DIR=/home/elastic/elasticsearch-8.15.0/log
 Environment=DATA_DIR=/home/elastic/elasticsearch-8.15.0/data
-Environment=PID_DIR=/var/run/elasticsearch
+Environment=PID_DIR=/home/elastic/elasticsearch-8.15.0/pid
 Environment=ES_SD_NOTIFY=true
 
 
@@ -18,7 +18,7 @@ WorkingDirectory=/home/elastic/elasticsearch-8.15.0
 User=elastic
 Group=elastic
 
-ExecStart=/home/elastic/elasticsearch-8.15.0/bin/elasticsearch -p ${PID_DIR}/elasticsearch.pid --quiet
+ExecStart=bash /home/elastic/elasticsearch-8.15.0/bin/elasticsearch -p ${PID_DIR}/elasticsearch.pid --quiet
 
 
 StandardOutput=journal

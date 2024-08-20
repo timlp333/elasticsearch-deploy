@@ -9,7 +9,8 @@ cd /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config
 
 tar -zxf certs.tar.gz
 
-chown -R elastic:elastic /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION
+chown -R elastic:elastic /home/elastic/elasticsearch-$ELASTICSEARCH_VERSION/config
+
 
 echo "Updated network.host to $LOCAL_IP in $ELASTICSEARCH_CONFIG_PATH"
 
