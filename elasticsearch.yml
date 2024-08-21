@@ -20,7 +20,7 @@ cluster.name: my-elasticsearch
 #
 # Use a descriptive name for the node:
 #
-node.name: node-1
+node.name: {node-name}
 #
 # Add custom attributes to the node:
 #

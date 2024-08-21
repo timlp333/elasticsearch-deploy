@@ -9,7 +9,7 @@ set HOSTFILE=hosts.txt
 set USERNAME=root
 set PASSWORD=Pa$$w0rd
 set VERSION=8.15.0
-
+set COUNTER=1
 :: 循環遍歷每個主機，逐一執行操作
 for /f %%i in (%HOSTFILE%) do (
     echo Processing %%i
@@ -44,7 +44,7 @@ for /f %%i in (%HOSTFILE%) do (
 
     :: 執行 step2.sh
     echo Executingstep2.sh on %%i
-    plink.exe -batch -ssh -pw %PASSWORD% %USERNAME%@%%i "bash /tmp/step2.sh"
+    plink.exe -batch -ssh -pw %PASSWORD% %USERNAME%@%%i "bash /tmp/step2.sh %COUNTER%"
 
 
 
@@ -61,6 +61,7 @@ for /f %%i in (%HOSTFILE%) do (
     echo Executingstep3.sh on %%i
     plink.exe -batch -ssh -pw %PASSWORD% %USERNAME%@%%i "bash /tmp/step3.sh"
 
+    set /A COUNTER=COUNTER+1
 
     echo Processing %%i completed
 )
