@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 
 set COUNTER=1
 for /f %%i in (%HOSTFILE%) do (
-    echo COUNTER
-    set /A COUNTER=COUNTER+1
+    echo %COUNTER%
+    set /A COUNTER+=1
 )
 pause
