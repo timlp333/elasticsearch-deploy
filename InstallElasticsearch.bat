@@ -44,7 +44,7 @@ for /f %%i in (%HOSTFILE%) do (
 
     :: 執行 step2.sh
     echo Executingstep2.sh on %%i
-    plink.exe -batch -ssh -pw %PASSWORD% %USERNAME%@%%i "bash /tmp/step2.sh %COUNTER%"
+    plink.exe -batch -ssh -pw %PASSWORD% %USERNAME%@%%i "bash /tmp/step2.sh !COUNTER!"
 
 
 
