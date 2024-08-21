@@ -5,6 +5,6 @@ set HOSTFILE=hosts.txt
 set COUNTER=1
 for /f %%i in (%HOSTFILE%) do (
     echo %COUNTER%
-    set /A COUNTER+=1
+    set /a COUNTER+=1
 )
 pause
