@@ -23,6 +23,21 @@ This batch script automates the installation and configuration of Elasticsearch 
   - `elasticsearch.service`
   - `step3.sh`
 
+- Edit `elasticsearch.yml`
+  - `discovery.seed_hosts` cluster's IP
+  - `xpack.security.http.ssl.certificate` new file name or path
+  - `xpack.security.http.ssl.key`
+  - `xpack.security.http.ssl.certificate_authorities`
+  - `xpack.security.transport.ssl.certificate`
+  - `xpack.security.transport.ssl.key`
+  - `xpack.security.transport.ssl.certificate_authorities`
+
+
+
+- bash /home/elastic/elasticsearch-8.15.0/bin/elasticsearch-setup-passwords auto --url https://<CHANGE_ME>:9200
+  - copy result
+
+
 ## Usage
 
 1. Open a command prompt.
