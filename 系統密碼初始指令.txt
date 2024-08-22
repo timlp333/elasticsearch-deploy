@@ -1,0 +1,4 @@
+//url請依照憑證的domain做修改
+bash /home/elastic/elasticsearch-8.15.0/bin/elasticsearch-setup-passwords auto --url https://<CHANGE_ME>:9200
+
+// 請紀錄elastic 、 kibana 和 beats 帳密
